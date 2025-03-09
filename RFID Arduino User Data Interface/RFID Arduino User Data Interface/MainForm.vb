@@ -1,10 +1,12 @@
 ﻿Imports System.Net
 Imports Newtonsoft.Json.Linq
+Imports PCSC
+Imports PCSC.Monitoring
+Imports System.Drawing.Drawing2D
 
 Public Class MainForm
-
-    ' Declare NFCReader with event handling
-    Private WithEvents nfcReader As New NFCReader()
+    Private contextFactory As New ContextFactory()
+    Private monitor As ISCardMonitor
 
     Private ipAddress As String = ""  ' Default IP address or URL source
 
@@ -57,6 +59,7 @@ Public Class MainForm
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.FormBorderStyle = FormBorderStyle.None ' Remove window border
         ' Me.WindowState = FormWindowState.Maximized ' Optional: Make fullscreen
+
         timeListView.OwnerDraw = True ' Enable custom drawing
 
         Timer1.Interval = 2000  ' Set for fetching user data every 2 seconds
@@ -66,6 +69,15 @@ Public Class MainForm
         Timer2.Enabled = True    ' Start the time updating timer
 
         GetLatestUserID()  ' Call the function initially when the form loads
+
+        Dim readerName As String = GetReaderName()
+        If readerName IsNot Nothing Then
+            monitor = New SCardMonitor(New ContextFactory(), SCardScope.System)
+            AddHandler monitor.CardInserted, AddressOf CardInserted
+            monitor.Start(readerName)
+        Else
+            LabelUID.Text = "No NFC Reader Found"
+        End If
     End Sub
 
     ' Timer event to repeatedly fetch the latest user data
@@ -159,14 +171,46 @@ Public Class MainForm
         e.Graphics.DrawString(e.Header.Text, timeListView.Font, Brushes.Black, e.Bounds, format)
     End Sub
 
-    ' Event triggered when an NFC card is detected
-    Private Sub nfcReader_CardDetected(uid As String) Handles nfcReader.CardDetected
-        If Me.InvokeRequired Then
-            Me.Invoke(Sub() LabelUID.Text = uid)
-        Else
-            LabelUID.Text = uid
+    Private Function GetReaderName() As String
+        Using context = contextFactory.Establish(SCardScope.System)
+            Dim readerNames = context.GetReaders()
+            If readerNames.Length > 0 Then Return readerNames(0)
+        End Using
+        Return Nothing
+    End Function
+
+    Private Sub CardInserted(sender As Object, e As CardStatusEventArgs)
+        Dim uid As String = GetCardUID(e.ReaderName)
+
+        If uid = "6300" Then
+            Me.Invoke(Sub() LabelUID.Text = "Sorry, please try again.")
+        ElseIf uid IsNot Nothing AndAlso uid <> "6300" Then
+            Me.Invoke(Sub() LabelUID.Text = "UID: " & uid)
         End If
-        Debug.WriteLine($"Card Detected: {uid}") ' Log to debug
     End Sub
 
+
+    Private Function GetCardUID(readerName As String) As String
+        Try
+            Using context = contextFactory.Establish(SCardScope.System)
+                Using reader = context.ConnectReader(readerName, SCardShareMode.Shared, SCardProtocol.Any)
+                    ' APDU command to get UID: FF CA 00 00 00
+                    Dim apdu As Byte() = {&HFF, &HCA, &H0, &H0, &H0}
+                    Dim receiveBuffer As Byte() = New Byte(255) {}
+                    Dim command = reader.Transmit(apdu, receiveBuffer)
+
+                    ' Extract UID from response
+                    Dim uidLength As Integer = command
+                    If uidLength > 0 Then
+                        Return BitConverter.ToString(receiveBuffer, 0, uidLength).Replace("-", "")
+                    End If
+                End Using
+            End Using
+        Catch ex As PCSC.Exceptions.ReaderUnavailableException
+            Me.Invoke(Sub() LabelUID.Text = "NFC Reader Not Available")
+        Catch ex As Exception
+            Me.Invoke(Sub() LabelUID.Text = "Error: " & ex.Message)
+        End Try
+        Return Nothing
+    End Function
 End Class

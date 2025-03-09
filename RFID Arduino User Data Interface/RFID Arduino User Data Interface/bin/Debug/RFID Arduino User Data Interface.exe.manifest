@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DirectShowLib.dll" size="343040">
-      <assemblyIdentity name="DirectShowLib" version="2.0.0.1408" language="neutral" processorArchitecture="amd64" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DirectShowLib.dll" size="294912">
+      <assemblyIdentity name="DirectShowLib" version="2.1.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>wc8c9EtJMLePzZADq1HjWvZHDXU12Z8NH9aL0LeTmWA=</dsig:DigestValue>
+        <dsig:DigestValue>a+Vjg86DmC9piMcAAVr6PVBkG6abSNDwKTKiJgIq/FY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -90,14 +90,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RFID Arduino User Data Interface.exe" size="251312">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PCSC.dll" size="77824">
+      <assemblyIdentity name="PCSC" version="7.0.0.0" publicKeyToken="13B76E54A2EE80A7" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>5ipGOp+ERwAwKKDY4ARXbM9douuhyfMlkPGJYISEcHw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RFID Arduino User Data Interface.exe" size="262576">
       <assemblyIdentity name="RFID Arduino User Data Interface" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>wkYodEMZFBTLu3jw0odqOSLb/rOTg3MEizkIGAcedng=</dsig:DigestValue>
+        <dsig:DigestValue>/NUV3SmtO3l/DXY8xPdt0mtsuFTQUnt+XPNTn7w5I/4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

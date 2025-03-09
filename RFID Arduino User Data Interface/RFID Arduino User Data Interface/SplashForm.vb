@@ -84,4 +84,8 @@ Public Class SplashForm
             videoWindow.SetWindowPosition(0, 0, videoPanel.Width, videoPanel.Height)
         End If
     End Sub
+
+    Private Sub videoPanel_Paint(sender As Object, e As PaintEventArgs) Handles videoPanel.Paint
+
+    End Sub
 End Class
