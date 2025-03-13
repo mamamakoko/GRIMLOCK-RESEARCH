@@ -214,6 +214,12 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\student2.png" />
+    <None Include="Resources\Background.png" />
+    <None Include="Resources\433830406_230081690190008_3764120539537984422_n.png" />
+    <Content Include="Resources\intro.avi">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\splash.avi">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

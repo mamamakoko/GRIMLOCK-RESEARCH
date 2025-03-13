@@ -6,8 +6,11 @@ Public Class SplashForm
     Private closeTimer As Timer ' Make timer a class-level variable
 
     Private Sub SplashForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.FormBorderStyle = FormBorderStyle.None ' Remove window border
+        Me.WindowState = FormWindowState.Maximized ' Optional: Make fullscreen
+
         ' Construct the video path dynamically
-        Dim videoPath As String = System.IO.Path.Combine(Application.StartupPath, "Resources", "splash.avi")
+        Dim videoPath As String = System.IO.Path.Combine(Application.StartupPath, "Resources", "intro.avi")
 
         ' Debug: Show the actual path
         ' MessageBox.Show("Checking video path: " & videoPath)
@@ -54,7 +57,7 @@ Public Class SplashForm
             ' Set a timer to close the splash screen when the video ends
             closeTimer = New Timer()
             AddHandler closeTimer.Tick, AddressOf CloseSplash
-            closeTimer.Interval = 7000 ' Adjust to match your video duration (in milliseconds)
+            closeTimer.Interval = 11000 ' Adjust to match your video duration (in milliseconds)
             closeTimer.Start()
 
         Catch ex As Exception
@@ -83,9 +86,5 @@ Public Class SplashForm
         If videoWindow IsNot Nothing Then
             videoWindow.SetWindowPosition(0, 0, videoPanel.Width, videoPanel.Height)
         End If
-    End Sub
-
-    Private Sub videoPanel_Paint(sender As Object, e As PaintEventArgs) Handles videoPanel.Paint
-
     End Sub
 End Class

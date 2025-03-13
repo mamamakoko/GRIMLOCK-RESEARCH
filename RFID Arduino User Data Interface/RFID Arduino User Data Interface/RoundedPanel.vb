@@ -31,22 +31,26 @@ Public Class RoundedPanel
         Dim radius As Integer = _cornerRadius * 2
         Dim path As New GraphicsPath()
 
-        ' Create a rounded rectangle shape
+        ' Create a rounded rectangle shape with arcs for all four corners
         path.StartFigure()
-        path.AddLine(0, 0, rect.Width, 0) ' Top edge
-        path.AddLine(rect.Width, 0, rect.Width, rect.Height - _cornerRadius) ' Right edge
 
-        ' Bottom-right rounded corner
+        ' Top-left corner
+        path.AddArc(0, 0, radius, radius, 180, 90)
+        ' Top edge
+        path.AddLine(_cornerRadius, 0, rect.Width - _cornerRadius, 0)
+        ' Top-right corner
+        path.AddArc(rect.Width - radius, 0, radius, radius, 270, 90)
+        ' Right edge
+        path.AddLine(rect.Width, _cornerRadius, rect.Width, rect.Height - _cornerRadius)
+        ' Bottom-right corner
         path.AddArc(rect.Width - radius, rect.Height - radius, radius, radius, 0, 90)
-
         ' Bottom edge
         path.AddLine(rect.Width - _cornerRadius, rect.Height, _cornerRadius, rect.Height)
-
-        ' Bottom-left rounded corner
+        ' Bottom-left corner
         path.AddArc(0, rect.Height - radius, radius, radius, 90, 90)
-
         ' Left edge
-        path.AddLine(0, rect.Height - _cornerRadius, 0, 0)
+        path.AddLine(0, rect.Height - _cornerRadius, 0, _cornerRadius)
+
         path.CloseFigure()
 
         ' ✅ Fix: Fill with Parent's Background to Simulate Transparency

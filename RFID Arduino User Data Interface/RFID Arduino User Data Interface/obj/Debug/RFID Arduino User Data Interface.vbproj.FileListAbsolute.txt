@@ -81,17 +81,14 @@ C:\Users\Kokoy pogi\Desktop\PROJECT GRIMLOCK\GRIMLOCK\RFID Arduino User Data Int
 C:\Users\Kokoy pogi\Desktop\PROJECT GRIMLOCK\GRIMLOCK\RFID Arduino User Data Interface\RFID Arduino User Data Interface\bin\Debug\System.Text.Encoding.CodePages.dll
 C:\Users\Kokoy pogi\Desktop\PROJECT GRIMLOCK\GRIMLOCK\RFID Arduino User Data Interface\RFID Arduino User Data Interface\bin\Debug\System.Text.Encodings.Web.dll
 C:\Users\Kokoy pogi\Desktop\PROJECT GRIMLOCK\GRIMLOCK\RFID Arduino User Data Interface\RFID Arduino User Data Interface\bin\Debug\System.Memory.dll
-C:\Users\Kokoy pogi\Desktop\PROJECT GRIMLOCK\GRIMLOCK\RFID Arduino User Data Interface\RFID Arduino User Data Interface\bin\Debug\System.Threading.Tasks.Extensions.dll
 C:\Users\Kokoy pogi\Desktop\PROJECT GRIMLOCK\GRIMLOCK\RFID Arduino User Data Interface\RFID Arduino User Data Interface\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\Kokoy pogi\Desktop\PROJECT GRIMLOCK\GRIMLOCK\RFID Arduino User Data Interface\RFID Arduino User Data Interface\bin\Debug\System.Buffers.dll
-C:\Users\Kokoy pogi\Desktop\PROJECT GRIMLOCK\GRIMLOCK\RFID Arduino User Data Interface\RFID Arduino User Data Interface\bin\Debug\System.ValueTuple.dll
 C:\Users\Kokoy pogi\Desktop\PROJECT GRIMLOCK\GRIMLOCK\RFID Arduino User Data Interface\RFID Arduino User Data Interface\bin\Debug\System.Numerics.Vectors.dll
-C:\Users\Kokoy pogi\Desktop\PROJECT GRIMLOCK\GRIMLOCK\RFID Arduino User Data Interface\RFID Arduino User Data Interface\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Kokoy pogi\Desktop\PROJECT GRIMLOCK\GRIMLOCK\RFID Arduino User Data Interface\RFID Arduino User Data Interface\bin\Debug\DirectShowLib.xml
-C:\Users\Kokoy pogi\Desktop\PROJECT GRIMLOCK\GRIMLOCK\RFID Arduino User Data Interface\RFID Arduino User Data Interface\bin\Debug\MySql.Data.xml
 C:\Users\Kokoy pogi\Desktop\PROJECT GRIMLOCK\GRIMLOCK\RFID Arduino User Data Interface\RFID Arduino User Data Interface\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Kokoy pogi\Desktop\PROJECT GRIMLOCK\GRIMLOCK\RFID Arduino User Data Interface\RFID Arduino User Data Interface\obj\Debug\RFID Arduino User Data Interface.exe.manifest
 C:\Users\Kokoy pogi\Desktop\PROJECT GRIMLOCK\GRIMLOCK\RFID Arduino User Data Interface\RFID Arduino User Data Interface\obj\Debug\RFID Arduino User Data Interface.application
 C:\Users\Kokoy pogi\Desktop\PROJECT GRIMLOCK\GRIMLOCK\RFID Arduino User Data Interface\RFID Arduino User Data Interface\obj\Debug\RFID Ard.32E9B43C.Up2Date
 C:\Users\Kokoy pogi\Desktop\PROJECT GRIMLOCK\GRIMLOCK\RFID Arduino User Data Interface\RFID Arduino User Data Interface\bin\Debug\PCSC.dll
 C:\Users\Kokoy pogi\Desktop\PROJECT GRIMLOCK\GRIMLOCK\RFID Arduino User Data Interface\RFID Arduino User Data Interface\bin\Debug\PCSC.pdb
+C:\Users\Kokoy pogi\Desktop\PROJECT GRIMLOCK\GRIMLOCK\RFID Arduino User Data Interface\RFID Arduino User Data Interface\bin\Debug\Resources\intro.avi
