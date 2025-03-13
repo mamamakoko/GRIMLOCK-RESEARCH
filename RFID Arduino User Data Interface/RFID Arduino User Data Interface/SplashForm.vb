@@ -7,7 +7,7 @@ Public Class SplashForm
 
     Private Sub SplashForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.FormBorderStyle = FormBorderStyle.None ' Remove window border
-        Me.WindowState = FormWindowState.Maximized ' Optional: Make fullscreen
+        'Me.WindowState = FormWindowState.Maximized ' Optional: Make fullscreen
 
         ' Construct the video path dynamically
         Dim videoPath As String = System.IO.Path.Combine(Application.StartupPath, "Resources", "intro.avi")
@@ -57,7 +57,7 @@ Public Class SplashForm
             ' Set a timer to close the splash screen when the video ends
             closeTimer = New Timer()
             AddHandler closeTimer.Tick, AddressOf CloseSplash
-            closeTimer.Interval = 11000 ' Adjust to match your video duration (in milliseconds)
+            closeTimer.Interval = 12000 ' Adjust to match your video duration (in milliseconds)
             closeTimer.Start()
 
         Catch ex As Exception

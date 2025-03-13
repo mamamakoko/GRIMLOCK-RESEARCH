@@ -22,6 +22,11 @@ RFID Arduino User Data Interface
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:RFID_Arduino_User_Data_Interface.My.Resources.Resources._433830406_230081690190008_3764120539537984422_n">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:RFID_Arduino_User_Data_Interface.My.Resources.Resources.Background">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -53,6 +58,11 @@ RFID Arduino User Data Interface
 </summary>
 </member>
 <member name="P:RFID_Arduino_User_Data_Interface.My.Resources.Resources.student">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RFID_Arduino_User_Data_Interface.My.Resources.Resources.student2">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

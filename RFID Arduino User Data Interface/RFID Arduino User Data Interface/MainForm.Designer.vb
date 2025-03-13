@@ -34,14 +34,16 @@ Partial Class MainForm
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.StudentPanel = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.btnSettings = New System.Windows.Forms.Button()
         Me.lblSection = New System.Windows.Forms.Label()
         Me.lblName = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.lblStudentNumber = New System.Windows.Forms.Label()
         Me.PictureBoxStudent = New System.Windows.Forms.PictureBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.RoundedPanel1 = New RFID_Arduino_User_Data_Interface.RoundedPanel()
+        Me.CustomButton2 = New RFID_Arduino_User_Data_Interface.CustomButton()
         Me.Panel3.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.StudentPanel.SuspendLayout()
@@ -94,7 +96,7 @@ Partial Class MainForm
         Me.timeListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
         Me.timeListView.HideSelection = False
         Me.timeListView.LabelWrap = False
-        Me.timeListView.Location = New System.Drawing.Point(0, 5)
+        Me.timeListView.Location = New System.Drawing.Point(0, 2)
         Me.timeListView.Margin = New System.Windows.Forms.Padding(0)
         Me.timeListView.MultiSelect = False
         Me.timeListView.Name = "timeListView"
@@ -110,13 +112,13 @@ Partial Class MainForm
         'timeIn
         '
         Me.timeIn.Text = "Time in"
-        Me.timeIn.Width = 240
+        Me.timeIn.Width = 468
         '
         'timeOut
         '
         Me.timeOut.Text = "Time Out"
         Me.timeOut.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.timeOut.Width = 240
+        Me.timeOut.Width = 467
         '
         'Panel1
         '
@@ -154,6 +156,8 @@ Partial Class MainForm
         Me.StudentPanel.BackColor = System.Drawing.Color.White
         Me.StudentPanel.BackgroundImage = Global.RFID_Arduino_User_Data_Interface.My.Resources.Resources.Background
         Me.StudentPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.StudentPanel.Controls.Add(Me.CustomButton2)
+        Me.StudentPanel.Controls.Add(Me.RoundedPanel1)
         Me.StudentPanel.Controls.Add(Me.Label4)
         Me.StudentPanel.Controls.Add(Me.Label3)
         Me.StudentPanel.Controls.Add(Me.btnSettings)
@@ -166,6 +170,31 @@ Partial Class MainForm
         Me.StudentPanel.Name = "StudentPanel"
         Me.StudentPanel.Size = New System.Drawing.Size(436, 750)
         Me.StudentPanel.TabIndex = 0
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Poppins", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(123, 382)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(189, 48)
+        Me.Label4.TabIndex = 16
+        Me.Label4.Text = "TAP YOUR ID"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Poppins ExtraBold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(55, 50)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(327, 37)
+        Me.Label3.TabIndex = 15
+        Me.Label3.Text = "Welcome to NAS Laboratory!"
         '
         'btnSettings
         '
@@ -242,30 +271,32 @@ Partial Class MainForm
         Me.PictureBoxStudent.TabIndex = 0
         Me.PictureBoxStudent.TabStop = False
         '
-        'Label3
+        'RoundedPanel1
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Poppins ExtraBold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(55, 50)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(327, 37)
-        Me.Label3.TabIndex = 15
-        Me.Label3.Text = "Welcome to NAS Laboratory!"
+        Me.RoundedPanel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.RoundedPanel1.BackColor = System.Drawing.Color.White
+        Me.RoundedPanel1.CornerRadius = 30
+        Me.RoundedPanel1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.RoundedPanel1.Location = New System.Drawing.Point(75, 715)
+        Me.RoundedPanel1.Name = "RoundedPanel1"
+        Me.RoundedPanel1.Size = New System.Drawing.Size(280, 76)
+        Me.RoundedPanel1.TabIndex = 17
         '
-        'Label4
+        'CustomButton2
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Poppins", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(123, 382)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(189, 48)
-        Me.Label4.TabIndex = 16
-        Me.Label4.Text = "TAP YOUR ID"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.CustomButton2.BackColor = System.Drawing.Color.White
+        Me.CustomButton2.BorderColor = System.Drawing.Color.Black
+        Me.CustomButton2.BorderSize = 2
+        Me.CustomButton2.ButtonText = "Configuration"
+        Me.CustomButton2.CornerRadius = 20
+        Me.CustomButton2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.CustomButton2.Font = New System.Drawing.Font("Poppins", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CustomButton2.HoverColor = System.Drawing.Color.LightGray
+        Me.CustomButton2.Location = New System.Drawing.Point(209, 510)
+        Me.CustomButton2.Name = "CustomButton2"
+        Me.CustomButton2.Size = New System.Drawing.Size(200, 64)
+        Me.CustomButton2.TabIndex = 19
+        Me.CustomButton2.TextColor = System.Drawing.Color.Black
         '
         'MainForm
         '
@@ -308,4 +339,6 @@ Partial Class MainForm
     Friend WithEvents ListView1 As ListView
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents RoundedPanel1 As RoundedPanel
+    Friend WithEvents CustomButton2 As CustomButton
 End Class

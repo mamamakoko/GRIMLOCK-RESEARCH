@@ -19,47 +19,55 @@ Public Class RoundedPanel
 
     Public Sub New()
         Me.SetStyle(ControlStyles.UserPaint Or ControlStyles.AllPaintingInWmPaint Or ControlStyles.OptimizedDoubleBuffer, True)
-        Me.BackColor = Color.Transparent ' Make it transparent in the designer
+        Me.BackColor = Color.White ' Set default background
     End Sub
 
     Protected Overrides Sub OnPaint(e As PaintEventArgs)
         MyBase.OnPaint(e)
         e.Graphics.SmoothingMode = SmoothingMode.AntiAlias
 
-        ' Get panel size
-        Dim rect As Rectangle = New Rectangle(0, 0, Me.Width, Me.Height)
-        Dim radius As Integer = _cornerRadius * 2
-        Dim path As New GraphicsPath()
+        ' Define rounded rectangle
+        Dim rect As New Rectangle(0, 0, Me.Width - 1, Me.Height - 1)
+        Dim path As GraphicsPath = GetRoundedRectanglePath(rect, _cornerRadius)
 
-        ' Create a rounded rectangle shape with arcs for all four corners
-        path.StartFigure()
-
-        ' Top-left corner
-        path.AddArc(0, 0, radius, radius, 180, 90)
-        ' Top edge
-        path.AddLine(_cornerRadius, 0, rect.Width - _cornerRadius, 0)
-        ' Top-right corner
-        path.AddArc(rect.Width - radius, 0, radius, radius, 270, 90)
-        ' Right edge
-        path.AddLine(rect.Width, _cornerRadius, rect.Width, rect.Height - _cornerRadius)
-        ' Bottom-right corner
-        path.AddArc(rect.Width - radius, rect.Height - radius, radius, radius, 0, 90)
-        ' Bottom edge
-        path.AddLine(rect.Width - _cornerRadius, rect.Height, _cornerRadius, rect.Height)
-        ' Bottom-left corner
-        path.AddArc(0, rect.Height - radius, radius, radius, 90, 90)
-        ' Left edge
-        path.AddLine(0, rect.Height - _cornerRadius, 0, _cornerRadius)
-
-        path.CloseFigure()
-
-        ' ✅ Fix: Fill with Parent's Background to Simulate Transparency
-        Using brush As New SolidBrush(Me.Parent.BackColor)
-            e.Graphics.FillRectangle(brush, rect) ' Fill entire panel with parent background color
-            e.Graphics.FillPath(New SolidBrush(Me.BackColor), path) ' Fill rounded panel with its actual color
+        ' Fill the background properly
+        Using brush As New SolidBrush(Me.BackColor)
+            e.Graphics.FillPath(brush, path)
         End Using
 
-        ' Apply the rounded shape as the clipping region
+        ' Draw border (optional)
+        Using pen As New Pen(Color.Black, 1)
+            e.Graphics.DrawPath(pen, path)
+        End Using
+
+        ' Apply clipping region
         Me.Region = New Region(path)
     End Sub
+
+    ' Function to create a rounded rectangle path
+    Private Function GetRoundedRectanglePath(rect As Rectangle, radius As Integer) As GraphicsPath
+        Dim path As New GraphicsPath()
+        Dim d As Integer = radius * 2
+
+        path.StartFigure()
+        ' Top-left corner
+        path.AddArc(rect.X, rect.Y, d, d, 180, 90)
+        ' Top edge
+        path.AddLine(rect.X + radius, rect.Y, rect.Right - radius, rect.Y)
+        ' Top-right corner
+        path.AddArc(rect.Right - d, rect.Y, d, d, 270, 90)
+        ' Right edge
+        path.AddLine(rect.Right, rect.Y + radius, rect.Right, rect.Bottom - radius)
+        ' Bottom-right corner
+        path.AddArc(rect.Right - d, rect.Bottom - d, d, d, 0, 90)
+        ' Bottom edge
+        path.AddLine(rect.Right - radius, rect.Bottom, rect.X + radius, rect.Bottom)
+        ' Bottom-left corner
+        path.AddArc(rect.X, rect.Bottom - d, d, d, 90, 90)
+        ' Left edge
+        path.AddLine(rect.X, rect.Bottom - radius, rect.X, rect.Y + radius)
+        path.CloseFigure()
+
+        Return path
+    End Function
 End Class
