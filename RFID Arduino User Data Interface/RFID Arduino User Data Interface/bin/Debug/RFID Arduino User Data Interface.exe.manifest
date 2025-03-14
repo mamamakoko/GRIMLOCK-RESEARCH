@@ -78,14 +78,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RFID Arduino User Data Interface.exe" size="5520304">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RFID Arduino User Data Interface.exe" size="5529520">
       <assemblyIdentity name="RFID Arduino User Data Interface" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>i+6fXNb/qq3yQv//y6mJOkaIjC7RTQK0hFd4NXnFny4=</dsig:DigestValue>
+        <dsig:DigestValue>WWhVluxnzxAsMzAyx33oHBJcOW8NxHU9aKol82m45Yg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

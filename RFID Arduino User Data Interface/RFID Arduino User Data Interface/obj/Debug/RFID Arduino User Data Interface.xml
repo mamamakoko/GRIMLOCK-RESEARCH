@@ -32,6 +32,11 @@ RFID Arduino User Data Interface
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:RFID_Arduino_User_Data_Interface.My.Resources.Resources.caret_arrow_up">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:RFID_Arduino_User_Data_Interface.My.Resources.Resources.CCS_LOGO">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

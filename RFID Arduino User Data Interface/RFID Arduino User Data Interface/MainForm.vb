@@ -30,7 +30,7 @@ Public Class MainForm
                     lblSection.Text = If(json("section") IsNot Nothing, json("section").ToString(), "N/A")
 
                     ' Clear the ListView before adding new data
-                    timeListView.Items.Clear()
+                    TimeListView.Items.Clear()
 
                     ' Check if 'attendance' key exists and parse it safely
                     If json("attendance") IsNot Nothing Then
@@ -40,7 +40,7 @@ Public Class MainForm
                         For Each attendance In timeArray
                             Dim listItem As New ListViewItem(If(attendance("time_in_date") IsNot Nothing, attendance("time_in_date").ToString(), "N/A")) ' time_in
                             listItem.SubItems.Add(If(attendance("time_out_date") IsNot Nothing, attendance("time_out_date").ToString(), "N/A"))          ' time_out
-                            timeListView.Items.Add(listItem)
+                            TimeListView.Items.Add(listItem)
                         Next
                     End If
                 End If
@@ -60,7 +60,7 @@ Public Class MainForm
         Me.FormBorderStyle = FormBorderStyle.None ' Remove window border
         ' Me.WindowState = FormWindowState.Maximized ' Optional: Make fullscreen
 
-        timeListView.OwnerDraw = True ' Enable custom drawing
+        TimeListView.OwnerDraw = True ' Enable custom drawing
 
         Timer1.Interval = 2000  ' Set for fetching user data every 2 seconds
         Timer1.Enabled = True    ' Start the data fetching timer
@@ -91,7 +91,7 @@ Public Class MainForm
     End Sub
 
     ' Button to allow user to change IP address or source URL
-    Private Sub btnSettings_Click(sender As Object, e As EventArgs) Handles btnSettings.Click
+    Private Sub BtnSettings_Click(sender As Object, e As EventArgs) Handles BtnSettings.Click
         Dim newIP As String = InputBox("Enter the new IP address or URL:", "Change IP Address", ipAddress)
 
         ' Validate the new IP address or URL (basic validation)
@@ -139,16 +139,16 @@ Public Class MainForm
 
     Private Sub AdjustListViewColumns()
         ' Make both columns equal width when the form is resized
-        Dim totalWidth As Integer = timeListView.ClientSize.Width
-        Dim columnWidth As Integer = totalWidth \ timeListView.Columns.Count ' Divide by the number of columns
+        Dim totalWidth As Integer = TimeListView.ClientSize.Width
+        Dim columnWidth As Integer = totalWidth \ TimeListView.Columns.Count ' Divide by the number of columns
 
-        For Each col As ColumnHeader In timeListView.Columns
+        For Each col As ColumnHeader In TimeListView.Columns
             col.Width = columnWidth
         Next
     End Sub
 
     ' Draw event to center text
-    Private Sub timeListView_DrawSubItem(sender As Object, e As DrawListViewSubItemEventArgs) Handles timeListView.DrawSubItem
+    Private Sub timeListView_DrawSubItem(sender As Object, e As DrawListViewSubItemEventArgs) Handles TimeListView.DrawSubItem
         Dim format As New StringFormat()
         format.Alignment = StringAlignment.Center
         format.LineAlignment = StringAlignment.Center
@@ -157,18 +157,18 @@ Public Class MainForm
         e.DrawBackground()
 
         ' Draw centered text
-        e.Graphics.DrawString(e.SubItem.Text, timeListView.Font, Brushes.Black, e.Bounds, format)
+        e.Graphics.DrawString(e.SubItem.Text, TimeListView.Font, Brushes.Black, e.Bounds, format)
     End Sub
 
     ' Draw event to center column headers
-    Private Sub timeListView_DrawColumnHeader(sender As Object, e As DrawListViewColumnHeaderEventArgs) Handles timeListView.DrawColumnHeader
+    Private Sub timeListView_DrawColumnHeader(sender As Object, e As DrawListViewColumnHeaderEventArgs) Handles TimeListView.DrawColumnHeader
         Dim format As New StringFormat()
         format.Alignment = StringAlignment.Center
         format.LineAlignment = StringAlignment.Center
 
         ' Draw header text
         e.DrawBackground()
-        e.Graphics.DrawString(e.Header.Text, timeListView.Font, Brushes.Black, e.Bounds, format)
+        e.Graphics.DrawString(e.Header.Text, TimeListView.Font, Brushes.Black, e.Bounds, format)
     End Sub
 
     Private Function GetReaderName() As String

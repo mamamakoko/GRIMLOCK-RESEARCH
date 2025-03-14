@@ -118,7 +118,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="CustomButton.vb">
+    <Compile Include="CustomButton.vb" />
+    <Compile Include="CustomListView.vb">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="MainForm.vb">
@@ -220,6 +221,7 @@
     <None Include="Resources\student2.png" />
     <None Include="Resources\Background.png" />
     <None Include="Resources\433830406_230081690190008_3764120539537984422_n.png" />
+    <None Include="Resources\caret-arrow-up.png" />
     <Content Include="Resources\intro.avi">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

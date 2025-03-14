@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{89BED2CA-D21B-44E0-AEE2-476654ECEA08}|RFID Arduino User Data Interface\\RFID Arduino User Data Interface.vbproj|solutionrelative:rfid arduino user data interface\\mainform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89BED2CA-D21B-44E0-AEE2-476654ECEA08}|RFID Arduino User Data Interface\\RFID Arduino User Data Interface.vbproj|c:\\users\\kokoy pogi\\desktop\\project grimlock\\grimlock\\rfid arduino user data interface\\rfid arduino user data interface\\splashform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{89BED2CA-D21B-44E0-AEE2-476654ECEA08}|RFID Arduino User Data Interface\\RFID Arduino User Data Interface.vbproj|solutionrelative:rfid arduino user data interface\\splashform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{89BED2CA-D21B-44E0-AEE2-476654ECEA08}|RFID Arduino User Data Interface\\RFID Arduino User Data Interface.vbproj|C:\\Users\\Kokoy pogi\\Desktop\\PROJECT GRIMLOCK\\GRIMLOCK\\RFID Arduino User Data Interface\\rfid arduino user data interface\\customlistview.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{89BED2CA-D21B-44E0-AEE2-476654ECEA08}|RFID Arduino User Data Interface\\RFID Arduino User Data Interface.vbproj|solutionrelative:rfid arduino user data interface\\customlistview.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89BED2CA-D21B-44E0-AEE2-476654ECEA08}|RFID Arduino User Data Interface\\RFID Arduino User Data Interface.vbproj|c:\\users\\kokoy pogi\\desktop\\project grimlock\\grimlock\\rfid arduino user data interface\\rfid arduino user data interface\\splashform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{89BED2CA-D21B-44E0-AEE2-476654ECEA08}|RFID Arduino User Data Interface\\RFID Arduino User Data Interface.vbproj|solutionrelative:rfid arduino user data interface\\splashform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{89BED2CA-D21B-44E0-AEE2-476654ECEA08}|RFID Arduino User Data Interface\\RFID Arduino User Data Interface.vbproj|C:\\Users\\Kokoy pogi\\Desktop\\PROJECT GRIMLOCK\\GRIMLOCK\\RFID Arduino User Data Interface\\rfid arduino user data interface\\mainform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{89BED2CA-D21B-44E0-AEE2-476654ECEA08}|RFID Arduino User Data Interface\\RFID Arduino User Data Interface.vbproj|solutionrelative:rfid arduino user data interface\\mainform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,27 +35,28 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "SplashForm.vb",
-              "DocumentMoniker": "C:\\Users\\Kokoy pogi\\Desktop\\PROJECT GRIMLOCK\\GRIMLOCK\\RFID Arduino User Data Interface\\RFID Arduino User Data Interface\\SplashForm.vb",
-              "RelativeDocumentMoniker": "RFID Arduino User Data Interface\\SplashForm.vb",
-              "ToolTip": "C:\\Users\\Kokoy pogi\\Desktop\\PROJECT GRIMLOCK\\GRIMLOCK\\RFID Arduino User Data Interface\\RFID Arduino User Data Interface\\SplashForm.vb",
-              "RelativeToolTip": "RFID Arduino User Data Interface\\SplashForm.vb",
-              "ViewState": "AgIAABwAAAAAAAAAAAAgwDYAAAAeAAAAAAAAAA==",
+              "Title": "CustomListView.vb",
+              "DocumentMoniker": "C:\\Users\\Kokoy pogi\\Desktop\\PROJECT GRIMLOCK\\GRIMLOCK\\RFID Arduino User Data Interface\\RFID Arduino User Data Interface\\CustomListView.vb",
+              "RelativeDocumentMoniker": "RFID Arduino User Data Interface\\CustomListView.vb",
+              "ToolTip": "C:\\Users\\Kokoy pogi\\Desktop\\PROJECT GRIMLOCK\\GRIMLOCK\\RFID Arduino User Data Interface\\RFID Arduino User Data Interface\\CustomListView.vb",
+              "RelativeToolTip": "RFID Arduino User Data Interface\\CustomListView.vb",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAYwG8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-03-13T13:12:23.137Z",
+              "WhenOpened": "2025-03-14T04:37:36.251Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "SplashForm.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Kokoy pogi\\Desktop\\PROJECT GRIMLOCK\\GRIMLOCK\\RFID Arduino User Data Interface\\RFID Arduino User Data Interface\\SplashForm.vb",
-              "RelativeDocumentMoniker": "RFID Arduino User Data Interface\\SplashForm.vb",
-              "ToolTip": "C:\\Users\\Kokoy pogi\\Desktop\\PROJECT GRIMLOCK\\GRIMLOCK\\RFID Arduino User Data Interface\\RFID Arduino User Data Interface\\SplashForm.vb [Design]",
-              "RelativeToolTip": "RFID Arduino User Data Interface\\SplashForm.vb [Design]",
+              "Title": "MainForm.vb",
+              "DocumentMoniker": "C:\\Users\\Kokoy pogi\\Desktop\\PROJECT GRIMLOCK\\GRIMLOCK\\RFID Arduino User Data Interface\\RFID Arduino User Data Interface\\MainForm.vb",
+              "RelativeDocumentMoniker": "RFID Arduino User Data Interface\\MainForm.vb",
+              "ToolTip": "C:\\Users\\Kokoy pogi\\Desktop\\PROJECT GRIMLOCK\\GRIMLOCK\\RFID Arduino User Data Interface\\RFID Arduino User Data Interface\\MainForm.vb*",
+              "RelativeToolTip": "RFID Arduino User Data Interface\\MainForm.vb*",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAowLMAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-03-13T13:12:19.83Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-03-14T02:30:18.034Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -63,8 +64,8 @@
               "Title": "MainForm.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Kokoy pogi\\Desktop\\PROJECT GRIMLOCK\\GRIMLOCK\\RFID Arduino User Data Interface\\RFID Arduino User Data Interface\\MainForm.vb",
               "RelativeDocumentMoniker": "RFID Arduino User Data Interface\\MainForm.vb",
-              "ToolTip": "C:\\Users\\Kokoy pogi\\Desktop\\PROJECT GRIMLOCK\\GRIMLOCK\\RFID Arduino User Data Interface\\RFID Arduino User Data Interface\\MainForm.vb [Design]",
-              "RelativeToolTip": "RFID Arduino User Data Interface\\MainForm.vb [Design]",
+              "ToolTip": "C:\\Users\\Kokoy pogi\\Desktop\\PROJECT GRIMLOCK\\GRIMLOCK\\RFID Arduino User Data Interface\\RFID Arduino User Data Interface\\MainForm.vb [Design]*",
+              "RelativeToolTip": "RFID Arduino User Data Interface\\MainForm.vb [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-03-13T12:04:08.868Z",
               "EditorCaption": " [Design]"
