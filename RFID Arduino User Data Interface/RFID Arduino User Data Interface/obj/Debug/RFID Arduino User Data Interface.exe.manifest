@@ -54,6 +54,18 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MaterialSkin.dll" size="6742528">
+      <assemblyIdentity name="MaterialSkin" version="2.3.1.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>PwdVUuKeWHNv+W4AyCippMsowWM3dEtpxRFBlq141Z4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="711952">
       <assemblyIdentity name="Newtonsoft.Json" version="13.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -78,14 +90,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RFID Arduino User Data Interface.exe" size="5526960">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RFID Arduino User Data Interface.exe" size="5529008">
       <assemblyIdentity name="RFID Arduino User Data Interface" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>/TKKXqacLyqL1hu4dxAm8vZoYZameZ7DwP9D+o18R2M=</dsig:DigestValue>
+        <dsig:DigestValue>l6pzctQ1SDi9ebsqLkWz4r0ZIZMXZgP5+5JJxa7f658=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

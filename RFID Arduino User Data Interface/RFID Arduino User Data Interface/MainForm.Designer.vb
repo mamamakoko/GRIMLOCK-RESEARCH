@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MainForm
-    Inherits System.Windows.Forms.Form
+    Inherits MaterialSkin.Controls.MaterialForm
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
@@ -29,10 +29,10 @@ Partial Class MainForm
         Me.timeEvent = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.TimeListView = New System.Windows.Forms.ListView()
-        Me.timeIn = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.timeOut = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.TimeListView2 = New RFID_Arduino_User_Data_Interface.CustomMaterialListView()
+        Me.timeOut = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.timeIn = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.StudentPanel = New System.Windows.Forms.Panel()
         Me.BtnSettings = New RFID_Arduino_User_Data_Interface.CustomButton()
@@ -84,43 +84,6 @@ Partial Class MainForm
         'Timer2
         '
         '
-        'TimeListView
-        '
-        Me.TimeListView.Alignment = System.Windows.Forms.ListViewAlignment.[Default]
-        Me.TimeListView.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TimeListView.BackColor = System.Drawing.Color.White
-        Me.TimeListView.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TimeListView.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.timeIn, Me.timeOut})
-        Me.TimeListView.Font = New System.Drawing.Font("Montserrat", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TimeListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
-        Me.TimeListView.HideSelection = False
-        Me.TimeListView.LabelWrap = False
-        Me.TimeListView.Location = New System.Drawing.Point(4, 2)
-        Me.TimeListView.Margin = New System.Windows.Forms.Padding(0)
-        Me.TimeListView.MultiSelect = False
-        Me.TimeListView.Name = "TimeListView"
-        Me.TimeListView.OwnerDraw = True
-        Me.TimeListView.Scrollable = False
-        Me.TimeListView.ShowGroups = False
-        Me.TimeListView.Size = New System.Drawing.Size(935, 321)
-        Me.TimeListView.TabIndex = 0
-        Me.TimeListView.TileSize = New System.Drawing.Size(348, 48)
-        Me.TimeListView.UseCompatibleStateImageBehavior = False
-        Me.TimeListView.View = System.Windows.Forms.View.Details
-        '
-        'timeIn
-        '
-        Me.timeIn.Text = "Time in"
-        Me.timeIn.Width = 468
-        '
-        'timeOut
-        '
-        Me.timeOut.Text = "Time Out"
-        Me.timeOut.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.timeOut.Width = 467
-        '
         'Panel1
         '
         Me.Panel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -128,12 +91,57 @@ Partial Class MainForm
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.TimeListView2)
         Me.Panel1.Controls.Add(Me.ListView1)
-        Me.Panel1.Controls.Add(Me.TimeListView)
         Me.Panel1.Location = New System.Drawing.Point(435, 50)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(942, 700)
+        Me.Panel1.Size = New System.Drawing.Size(944, 700)
         Me.Panel1.TabIndex = 1
+        '
+        'TimeListView2
+        '
+        Me.TimeListView2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TimeListView2.AutoArrange = False
+        Me.TimeListView2.AutoSizeTable = False
+        Me.TimeListView2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TimeListView2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TimeListView2.ColumnBackColor = System.Drawing.Color.LightSkyBlue
+        Me.TimeListView2.ColumnForeColor = System.Drawing.Color.Black
+        Me.TimeListView2.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.timeIn, Me.timeOut})
+        Me.TimeListView2.Depth = 0
+        Me.TimeListView2.EvenRowColor = System.Drawing.Color.White
+        Me.TimeListView2.Font = New System.Drawing.Font("Poppins", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TimeListView2.ForeColor = System.Drawing.Color.Black
+        Me.TimeListView2.FullRowSelect = True
+        Me.TimeListView2.HeaderBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.TimeListView2.HeaderForeColor = System.Drawing.Color.Black
+        Me.TimeListView2.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
+        Me.TimeListView2.HideSelection = False
+        Me.TimeListView2.Location = New System.Drawing.Point(0, 5)
+        Me.TimeListView2.Margin = New System.Windows.Forms.Padding(0)
+        Me.TimeListView2.MinimumSize = New System.Drawing.Size(200, 100)
+        Me.TimeListView2.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.TimeListView2.MouseState = MaterialSkin.MouseState.OUT
+        Me.TimeListView2.MultiSelect = False
+        Me.TimeListView2.Name = "TimeListView2"
+        Me.TimeListView2.OddRowColor = System.Drawing.Color.LightGray
+        Me.TimeListView2.OwnerDraw = True
+        Me.TimeListView2.Size = New System.Drawing.Size(934, 463)
+        Me.TimeListView2.TabIndex = 2
+        Me.TimeListView2.UseCompatibleStateImageBehavior = False
+        Me.TimeListView2.View = System.Windows.Forms.View.Details
+        '
+        'timeOut
+        '
+        Me.timeOut.Text = "Time Out"
+        Me.timeOut.Width = 469
+        '
+        'timeIn
+        '
+        Me.timeIn.Text = "Time In"
+        Me.timeIn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.timeIn.Width = 465
         '
         'ListView1
         '
@@ -146,7 +154,7 @@ Partial Class MainForm
         Me.ListView1.HideSelection = False
         Me.ListView1.Location = New System.Drawing.Point(0, 468)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(935, 232)
+        Me.ListView1.Size = New System.Drawing.Size(937, 232)
         Me.ListView1.TabIndex = 1
         Me.ListView1.UseCompatibleStateImageBehavior = False
         '
@@ -306,14 +314,14 @@ Partial Class MainForm
     Friend WithEvents lblName As Label
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Timer2 As Timer
-    Friend WithEvents TimeListView As ListView
-    Friend WithEvents timeIn As ColumnHeader
-    Friend WithEvents timeOut As ColumnHeader
     Friend WithEvents Panel1 As Panel
     Friend WithEvents ListView1 As ListView
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
     Friend WithEvents BtnSettings As CustomButton
     Friend WithEvents ColumnHeader1 As ColumnHeader
     Friend WithEvents ColumnHeader2 As ColumnHeader
+    Friend WithEvents TimeListView2 As CustomMaterialListView
+    Friend WithEvents timeOut As ColumnHeader
+    Friend WithEvents timeIn As ColumnHeader
+    Friend WithEvents Label3 As Label
 End Class

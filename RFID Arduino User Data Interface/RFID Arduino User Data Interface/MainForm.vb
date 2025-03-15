@@ -4,7 +4,13 @@ Imports PCSC
 Imports PCSC.Monitoring
 Imports System.Drawing.Drawing2D
 
+Imports MaterialSkin
+Imports MaterialSkin.Controls
+
+
 Public Class MainForm
+    Inherits MaterialSkin.Controls.MaterialForm
+
     Private contextFactory As New ContextFactory()
     Private monitor As ISCardMonitor
 
@@ -30,7 +36,7 @@ Public Class MainForm
                     lblSection.Text = If(json("section") IsNot Nothing, json("section").ToString(), "N/A")
 
                     ' Clear the ListView before adding new data
-                    TimeListView.Items.Clear()
+                    TimeListView2.Items.Clear()
 
                     ' Check if 'attendance' key exists and parse it safely
                     If json("attendance") IsNot Nothing Then
@@ -40,7 +46,7 @@ Public Class MainForm
                         For Each attendance In timeArray
                             Dim listItem As New ListViewItem(If(attendance("time_in_date") IsNot Nothing, attendance("time_in_date").ToString(), "N/A")) ' time_in
                             listItem.SubItems.Add(If(attendance("time_out_date") IsNot Nothing, attendance("time_out_date").ToString(), "N/A"))          ' time_out
-                            TimeListView.Items.Add(listItem)
+                            TimeListView2.Items.Add(listItem)
                         Next
                     End If
                 End If
@@ -60,7 +66,7 @@ Public Class MainForm
         Me.FormBorderStyle = FormBorderStyle.None ' Remove window border
         ' Me.WindowState = FormWindowState.Maximized ' Optional: Make fullscreen
 
-        TimeListView.OwnerDraw = True ' Enable custom drawing
+        TimeListView2.OwnerDraw = True ' Enable custom drawing
 
         Timer1.Interval = 2000  ' Set for fetching user data every 2 seconds
         Timer1.Enabled = True    ' Start the data fetching timer
@@ -132,6 +138,45 @@ Public Class MainForm
         Return ipRegex.IsMatch(ip) OrElse domainRegex.IsMatch(ip)
     End Function
 
+    '' Adjust the column widths when the form is resized
+    'Private Sub MainForm_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
+    '    AdjustListViewColumns()
+    'End Sub
+
+    'Private Sub AdjustListViewColumns()
+    '    ' Make both columns equal width when the form is resized
+    '    Dim totalWidth As Integer = TimeListView.ClientSize.Width
+    '    Dim columnWidth As Integer = totalWidth \ TimeListView.Columns.Count ' Divide by the number of columns
+
+    '    For Each col As ColumnHeader In TimeListView.Columns
+    '        col.Width = columnWidth
+    '    Next
+    'End Sub
+
+    '' Draw event to center text
+    'Private Sub timeListView_DrawSubItem(sender As Object, e As DrawListViewSubItemEventArgs) Handles TimeListView.DrawSubItem
+    '    Dim format As New StringFormat()
+    '    format.Alignment = StringAlignment.Center
+    '    format.LineAlignment = StringAlignment.Center
+
+    '    ' Draw background
+    '    e.DrawBackground()
+
+    '    ' Draw centered text
+    '    e.Graphics.DrawString(e.SubItem.Text, TimeListView.Font, Brushes.Black, e.Bounds, format)
+    'End Sub
+
+    '' Draw event to center column headers
+    'Private Sub timeListView_DrawColumnHeader(sender As Object, e As DrawListViewColumnHeaderEventArgs) Handles TimeListView.DrawColumnHeader
+    '    Dim format As New StringFormat()
+    '    format.Alignment = StringAlignment.Center
+    '    format.LineAlignment = StringAlignment.Center
+
+    '    ' Draw header text
+    '    e.DrawBackground()
+    '    e.Graphics.DrawString(e.Header.Text, TimeListView.Font, Brushes.Black, e.Bounds, format)
+    'End Sub
+
     ' Adjust the column widths when the form is resized
     Private Sub MainForm_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
         AdjustListViewColumns()
@@ -139,16 +184,16 @@ Public Class MainForm
 
     Private Sub AdjustListViewColumns()
         ' Make both columns equal width when the form is resized
-        Dim totalWidth As Integer = TimeListView.ClientSize.Width
-        Dim columnWidth As Integer = totalWidth \ TimeListView.Columns.Count ' Divide by the number of columns
+        Dim totalWidth As Integer = TimeListView2.ClientSize.Width
+        Dim columnWidth As Integer = totalWidth \ TimeListView2.Columns.Count ' Divide by the number of columns
 
-        For Each col As ColumnHeader In TimeListView.Columns
+        For Each col As ColumnHeader In TimeListView2.Columns
             col.Width = columnWidth
         Next
     End Sub
 
     ' Draw event to center text
-    Private Sub timeListView_DrawSubItem(sender As Object, e As DrawListViewSubItemEventArgs) Handles TimeListView.DrawSubItem
+    Private Sub TimeListView2_DrawSubItem(sender As Object, e As DrawListViewSubItemEventArgs) Handles TimeListView2.DrawSubItem
         Dim format As New StringFormat()
         format.Alignment = StringAlignment.Center
         format.LineAlignment = StringAlignment.Center
@@ -157,18 +202,18 @@ Public Class MainForm
         e.DrawBackground()
 
         ' Draw centered text
-        e.Graphics.DrawString(e.SubItem.Text, TimeListView.Font, Brushes.Black, e.Bounds, format)
+        e.Graphics.DrawString(e.SubItem.Text, TimeListView2.Font, Brushes.Black, e.Bounds, format)
     End Sub
 
     ' Draw event to center column headers
-    Private Sub timeListView_DrawColumnHeader(sender As Object, e As DrawListViewColumnHeaderEventArgs) Handles TimeListView.DrawColumnHeader
+    Private Sub TimeListView2_DrawColumnHeader(sender As Object, e As DrawListViewColumnHeaderEventArgs) Handles TimeListView2.DrawColumnHeader
         Dim format As New StringFormat()
         format.Alignment = StringAlignment.Center
         format.LineAlignment = StringAlignment.Center
 
         ' Draw header text
         e.DrawBackground()
-        e.Graphics.DrawString(e.Header.Text, TimeListView.Font, Brushes.Black, e.Bounds, format)
+        e.Graphics.DrawString(e.Header.Text, TimeListView2.Font, Brushes.Black, e.Bounds, format)
     End Sub
 
     Private Function GetReaderName() As String
