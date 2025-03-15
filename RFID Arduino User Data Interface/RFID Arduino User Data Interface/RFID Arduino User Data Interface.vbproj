@@ -119,9 +119,6 @@
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="CustomButton.vb" />
-    <Compile Include="CustomListView.vb">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="MainForm.vb">
       <SubType>Form</SubType>
     </Compile>

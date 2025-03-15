@@ -35,6 +35,7 @@ Partial Class MainForm
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.StudentPanel = New System.Windows.Forms.Panel()
+        Me.BtnSettings = New RFID_Arduino_User_Data_Interface.CustomButton()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lblSection = New System.Windows.Forms.Label()
@@ -42,10 +43,8 @@ Partial Class MainForm
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.lblStudentNumber = New System.Windows.Forms.Label()
         Me.PictureBoxStudent = New System.Windows.Forms.PictureBox()
-        Me.CustomListView1 = New RFID_Arduino_User_Data_Interface.CustomListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.BtnSettings = New RFID_Arduino_User_Data_Interface.CustomButton()
         Me.Panel3.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.StudentPanel.SuspendLayout()
@@ -129,7 +128,6 @@ Partial Class MainForm
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.CustomListView1)
         Me.Panel1.Controls.Add(Me.ListView1)
         Me.Panel1.Controls.Add(Me.TimeListView)
         Me.Panel1.Location = New System.Drawing.Point(435, 50)
@@ -173,6 +171,20 @@ Partial Class MainForm
         Me.StudentPanel.Name = "StudentPanel"
         Me.StudentPanel.Size = New System.Drawing.Size(436, 750)
         Me.StudentPanel.TabIndex = 0
+        '
+        'BtnSettings
+        '
+        Me.BtnSettings.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.BtnSettings.BackColor = System.Drawing.Color.White
+        Me.BtnSettings.ButtonIcon = Global.RFID_Arduino_User_Data_Interface.My.Resources.Resources.caret_arrow_up
+        CornerRadius1.BottomLeft = 0
+        CornerRadius1.BottomRight = 0
+        Me.BtnSettings.CornerRadii = CornerRadius1
+        Me.BtnSettings.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnSettings.Location = New System.Drawing.Point(75, 721)
+        Me.BtnSettings.Name = "BtnSettings"
+        Me.BtnSettings.Size = New System.Drawing.Size(280, 29)
+        Me.BtnSettings.TabIndex = 17
         '
         'Label4
         '
@@ -261,54 +273,6 @@ Partial Class MainForm
         Me.PictureBoxStudent.TabIndex = 0
         Me.PictureBoxStudent.TabStop = False
         '
-        'CustomListView1
-        '
-        Me.CustomListView1.Alignment = System.Windows.Forms.ListViewAlignment.[Default]
-        Me.CustomListView1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CustomListView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.CustomListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2})
-        Me.CustomListView1.EvenRowColor = System.Drawing.Color.LightGray
-        Me.CustomListView1.HeaderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.CustomListView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
-        Me.CustomListView1.HeaderTextColor = System.Drawing.Color.White
-        Me.CustomListView1.HideSelection = False
-        Me.CustomListView1.LabelWrap = False
-        Me.CustomListView1.Location = New System.Drawing.Point(0, 371)
-        Me.CustomListView1.MultiSelect = False
-        Me.CustomListView1.Name = "CustomListView1"
-        Me.CustomListView1.OddRowColor = System.Drawing.Color.White
-        Me.CustomListView1.OwnerDraw = True
-        Me.CustomListView1.Scrollable = False
-        Me.CustomListView1.Size = New System.Drawing.Size(935, 97)
-        Me.CustomListView1.TabIndex = 2
-        Me.CustomListView1.UseCompatibleStateImageBehavior = False
-        Me.CustomListView1.View = System.Windows.Forms.View.Details
-        '
-        'ColumnHeader1
-        '
-        Me.ColumnHeader1.Text = "Time In"
-        Me.ColumnHeader1.Width = 200
-        '
-        'ColumnHeader2
-        '
-        Me.ColumnHeader2.Text = "Time In"
-        Me.ColumnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader2.Width = 155
-        '
-        'BtnSettings
-        '
-        Me.BtnSettings.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.BtnSettings.BackColor = System.Drawing.Color.White
-        Me.BtnSettings.ButtonIcon = Global.RFID_Arduino_User_Data_Interface.My.Resources.Resources.caret_arrow_up
-        CornerRadius1.BottomLeft = 0
-        CornerRadius1.BottomRight = 0
-        Me.BtnSettings.CornerRadii = CornerRadius1
-        Me.BtnSettings.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnSettings.Location = New System.Drawing.Point(75, 721)
-        Me.BtnSettings.Name = "BtnSettings"
-        Me.BtnSettings.Size = New System.Drawing.Size(280, 29)
-        Me.BtnSettings.TabIndex = 17
-        '
         'MainForm
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit
@@ -350,7 +314,6 @@ Partial Class MainForm
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents BtnSettings As CustomButton
-    Friend WithEvents CustomListView1 As CustomListView
     Friend WithEvents ColumnHeader1 As ColumnHeader
     Friend WithEvents ColumnHeader2 As ColumnHeader
 End Class
